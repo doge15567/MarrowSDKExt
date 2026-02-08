@@ -5,8 +5,8 @@ using UnityEngine.UIElements;
 
 namespace SLZ.Marrow.Circuits
 {
-	public class ActuatorSocket : Actuator
-	{
+    public class ActuatorSocket : Actuator
+    {
         [SerializeField]
         private Circuit _input;
         [SerializeField]
@@ -29,13 +29,6 @@ namespace SLZ.Marrow.Circuits
         }
         protected virtual void Reset()
         {
-        }
-        public ActuatorSocket()
-        {
-            base._updateFixedTime = -1f;
-            int num = 0;
-            base._updateSeed = -1f;
-            base._inputs = new Circuit[num];
         }
     }
 }

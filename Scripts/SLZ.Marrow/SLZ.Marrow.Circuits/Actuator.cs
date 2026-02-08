@@ -10,14 +10,14 @@ namespace SLZ.Marrow.Circuits
     public class Actuator : MonoBehaviour
     {
         private float _updateFixedTime = -1f;
-        private float _updateSeed;
-        private Circuit[] _inputs;
+        private float _updateSeed = -1f;
+        private Circuit[] _inputs = new Circuit[0];
         protected ExternalActuator _externalActuator;
         public double updateFixedTime
         {
             get
             {
-                float num = _updateFixedTime;
+                return _updateFixedTime;
             }
         }
         public float updateSeed
@@ -73,7 +73,7 @@ namespace SLZ.Marrow.Circuits
         }
         protected void SetInputs(Circuit circuitA, Circuit circuitB, Circuit circuitC)
         {
-            
+
         }
         protected void SetInputs(Circuit[] circuits)
         {
@@ -83,12 +83,6 @@ namespace SLZ.Marrow.Circuits
         }
         private void UnlinkInputs()
         {
-        }
-        public Actuator()
-        {
-            int num = 0;
-            _updateSeed = -1f;
-            _inputs = new Circuit[num];
         }
     }
 }
